@@ -43,7 +43,9 @@ action_kit_1.ActionKit.run(async ({ options, logger, config, deviceHostClient, c
         }
     }
     command(['run', 'newbie:cicd']);
-    command(['run', 'build']);
+    const tag = DOGU_RUN_TYPE === 'production' ? 'latest' : 'development';
+    command(['up', `@dogu-tech/toolkit@${tag}`]);
+    command(['run', 'build:cicd']);
     command(['ts-node', validatedInputs.script]);
 });
 //# sourceMappingURL=main.js.map

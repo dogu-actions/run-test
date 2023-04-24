@@ -40,6 +40,8 @@ ActionKit.run(async ({ options, logger, config, deviceHostClient, consoleActionC
   }
 
   command(['run', 'newbie:cicd']);
-  command(['run', 'build']);
+  const tag = DOGU_RUN_TYPE === 'production' ? 'latest' : 'development';
+  command(['up', `@dogu-tech/toolkit@${tag}`]);
+  command(['run', 'build:cicd']);
   command(['ts-node', validatedInputs.script]);
 });
