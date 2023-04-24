@@ -1,5 +1,5 @@
 {
-  "name": "@dogu-actions/test-run",
+  "name": "@dogu-actions/run-test",
   "version": "0.0.0",
   "description": "",
   "license": "MIT",
@@ -7,12 +7,12 @@
   "main": "./build/src/main.js",
   "scripts": {
     "build": "tsc -b",
-    "clean": "shx rm -rf build",
+    "clean": "shx rm -rf build .publish-github",
     "dev": "nodemon",
     "publish:github:dev": "tsc -b && cross-env DOGU_RUN_TYPE=development ts-node scripts/publish-github.ts",
     "rebuild": "yarn run clean && yarn run build",
     "start": "yarn run build && ts-node src/main.ts",
-    "watch": "clear; echo @dogu-actions/test-run Watching... && nodemon"
+    "watch": "clear; echo @dogu-actions/run-test Watching... && nodemon"
   },
   "types": "./build/src/main.d.ts",
   "dependencies": {

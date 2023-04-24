@@ -1,1 +1,1 @@
-# @dogu-actions/test-run
+# dogu-actions/run-test

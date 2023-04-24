@@ -1,12 +1,9 @@
-name: ''
-description: ''
-author: ''
+name: dogu-actions/run-test
+description: run test with gamium
+author: dogu
 inputs:
-  foo:
-    description: ''
-    default: ''
-    required: false
+  script:
+    description: test script
+    required: true
 runs:
-  # pre: ''
-  main: build/src/main.js
-  # post: ''
+  main: tsc -b && ts-node src/main.ts
