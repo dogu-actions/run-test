@@ -16,7 +16,7 @@
   },
   "types": "./build/src/main.d.ts",
   "dependencies": {
-    "@dogu-tech/action-kit": "git+https://github.com/dogu-team/typescript-action-kit.git#development"
+    "@dogu-tech/action-kit": "development"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
