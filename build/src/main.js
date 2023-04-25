@@ -10,9 +10,10 @@ action_kit_1.ActionKit.run(async ({ options, logger, config, deviceHostClient, c
     const { DOGU_ACTION_INPUTS, DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID, DOGU_LOG_LEVEL, DOGU_RUN_TYPE } = options;
     logger.info('log level', { DOGU_LOG_LEVEL });
     const validatedInputs = await (0, action_kit_1.transformAndValidate)(action_kit_1.RunTestInputs, DOGU_ACTION_INPUTS);
+    const { script } = validatedInputs;
     const paths = await deviceHostClient.getPaths();
     const nodeBinPath = path_1.default.dirname(paths.common.node16);
-    const yarnBinPath = path_1.default.resolve(nodeBinPath, '../lib/node_modules/yarn/bin/yarn');
+    const yarnPath = path_1.default.resolve(nodeBinPath, '../lib/node_modules/yarn/bin/yarn');
     let deviceProjectGitPath = path_1.default.resolve(action_kit_1.HostPaths.deviceProjectGitPath(DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID));
     if (DOGU_RUN_TYPE === 'local') {
         logger.info('Running locally');
@@ -22,7 +23,7 @@ action_kit_1.ActionKit.run(async ({ options, logger, config, deviceHostClient, c
         logger.info('Running on device host');
     }
     function command(args) {
-        const command = yarnBinPath;
+        const command = yarnPath;
         logger.info(`Running command: ${command} ${args.join(' ')}`);
         const env = {
             ...process.env,
@@ -43,9 +44,8 @@ action_kit_1.ActionKit.run(async ({ options, logger, config, deviceHostClient, c
         }
     }
     command(['run', 'newbie:cicd']);
-    const tag = DOGU_RUN_TYPE === 'production' ? 'latest' : 'development';
-    command(['up', `@dogu-tech/toolkit@${tag}`]);
+    command(['up']);
     command(['run', 'build:cicd']);
-    command(['ts-node', validatedInputs.script]);
+    command(['ts-node', script]);
 });
 //# sourceMappingURL=main.js.map
