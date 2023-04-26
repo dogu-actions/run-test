@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const action_kit_1 = require("@dogu-tech/action-kit");
 const child_process_1 = require("child_process");
 const path_1 = __importDefault(require("path"));
+const config_1 = require("./config");
 action_kit_1.ActionKit.run(async ({ options, logger, config, deviceHostClient, consoleActionClient }) => {
     const { DOGU_ACTION_INPUTS, DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID, DOGU_LOG_LEVEL, DOGU_RUN_TYPE } = options;
     logger.info('log level', { DOGU_LOG_LEVEL });
@@ -15,12 +16,12 @@ action_kit_1.ActionKit.run(async ({ options, logger, config, deviceHostClient, c
     const nodeBinPath = path_1.default.dirname(paths.common.node16);
     const yarnPath = path_1.default.resolve(nodeBinPath, '../lib/node_modules/yarn/bin/yarn');
     let deviceProjectGitPath = path_1.default.resolve(action_kit_1.HostPaths.deviceProjectGitPath(DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID));
-    if (DOGU_RUN_TYPE === 'local') {
+    if (config_1.config.localUserProject.use) {
         logger.info('Running locally');
-        deviceProjectGitPath = path_1.default.resolve(process.cwd(), '../../user-templates/v1');
+        deviceProjectGitPath = config_1.config.localUserProject.path;
     }
     else {
-        logger.info('Running on device host');
+        logger.info('Running on device host project');
     }
     function command(args) {
         const command = yarnPath;
