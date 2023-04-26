@@ -6,7 +6,7 @@ import fs from 'fs';
 ActionKit.run(async ({ options, logger, config, deviceHostClient, consoleActionClient }) => {
   const { DOGU_ACTION_INPUTS, DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID, DOGU_LOG_LEVEL } = options;
   logger.info('log level', { DOGU_LOG_LEVEL });
-  const validatedInputs = await transformAndValidate(RunTestInputs, DOGU_ACTION_INPUTS);
+  const validatedInputs = await transformAndValidate(RunTestInputs, JSON.parse(DOGU_ACTION_INPUTS));
   const { script } = validatedInputs;
   const paths = await deviceHostClient.getPaths();
   const nodeBinPath = path.dirname(paths.common.node16);
@@ -36,7 +36,7 @@ ActionKit.run(async ({ options, logger, config, deviceHostClient, consoleActionC
     logger.info('Running on device host project');
   }
 
-  function command(args: string[]) {
+  function yarn(args: string[]) {
     const command = yarnPath;
     logger.info(`Running command: ${command} ${args.join(' ')}`);
     const env = {
@@ -62,11 +62,13 @@ ActionKit.run(async ({ options, logger, config, deviceHostClient, consoleActionC
   const stat = await fs.promises.stat(yarnLockPath).catch(() => null);
   if (!stat) {
     logger.info('yarn.lock not found, create yarn.lock');
-    fs.promises.writeFile(yarnLockPath, '');
+    const handle = await fs.promises.open(yarnLockPath, 'w');
+    await handle.close();
     logger.info('yarn.lock created');
   }
-  command(['run', 'newbie:cicd']);
-  command(['up']);
-  command(['run', 'build:cicd']);
-  command(['ts-node', script]);
+  yarn(['install']);
+  yarn(['run', 'newbie:cicd']);
+  yarn(['up']);
+  yarn(['run', 'build:cicd']);
+  yarn(['ts-node', script]);
 });
