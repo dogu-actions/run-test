@@ -1,20 +1,37 @@
-import { ActionKit, HostPaths, RunTestInputs, transformAndValidate } from '@dogu-tech/action-kit';
+import { ActionKit, errorify, HostPaths, RunTestInputs, transformAndValidate } from '@dogu-tech/action-kit';
 import { spawnSync } from 'child_process';
 import path from 'path';
-import { config as devConfig } from './config';
+import fs from 'fs';
 
 ActionKit.run(async ({ options, logger, config, deviceHostClient, consoleActionClient }) => {
-  const { DOGU_ACTION_INPUTS, DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID, DOGU_LOG_LEVEL, DOGU_RUN_TYPE } = options;
+  const { DOGU_ACTION_INPUTS, DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID, DOGU_LOG_LEVEL } = options;
   logger.info('log level', { DOGU_LOG_LEVEL });
   const validatedInputs = await transformAndValidate(RunTestInputs, DOGU_ACTION_INPUTS);
   const { script } = validatedInputs;
   const paths = await deviceHostClient.getPaths();
   const nodeBinPath = path.dirname(paths.common.node16);
-  const yarnPath = path.resolve(nodeBinPath, '../lib/node_modules/yarn/bin/yarn');
+  const yarnPath = HostPaths.yarnPath(paths.common.node16);
   let deviceProjectGitPath = path.resolve(HostPaths.deviceProjectGitPath(DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID));
-  if (devConfig.localUserProject.use) {
+
+  async function loadUserLocalProjectPath(): Promise<string> {
+    try {
+      const devConfig = await fs.promises.readFile('dev.config.json', {
+        encoding: 'utf8',
+      });
+      const parsed = JSON.parse(devConfig);
+      if (parsed.localUserProject.use) {
+        return parsed.localUserProject.path;
+      }
+    } catch (error) {
+      logger.debug('dev.config.json failed', { error: errorify(error) });
+    }
+    return '';
+  }
+
+  const localUserProjectPath = await loadUserLocalProjectPath();
+  if (localUserProjectPath) {
     logger.info('Running locally');
-    deviceProjectGitPath = devConfig.localUserProject.path;
+    deviceProjectGitPath = localUserProjectPath;
   } else {
     logger.info('Running on device host project');
   }
@@ -41,6 +58,13 @@ ActionKit.run(async ({ options, logger, config, deviceHostClient, consoleActionC
     }
   }
 
+  const yarnLockPath = path.resolve(deviceProjectGitPath, 'yarn.lock');
+  const stat = await fs.promises.stat(yarnLockPath).catch(() => null);
+  if (!stat) {
+    logger.info('yarn.lock not found, create yarn.lock');
+    fs.promises.writeFile(yarnLockPath, '');
+    logger.info('yarn.lock created');
+  }
   command(['run', 'newbie:cicd']);
   command(['up']);
   command(['run', 'build:cicd']);
