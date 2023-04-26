@@ -1,7 +1,7 @@
 import { ActionKit, errorify, HostPaths, RunTestInputs, transformAndValidate } from '@dogu-tech/action-kit';
 import { spawnSync } from 'child_process';
-import path from 'path';
 import fs from 'fs';
+import path from 'path';
 
 ActionKit.run(async ({ options, logger, config, deviceHostClient, consoleActionClient }) => {
   const { DOGU_ACTION_INPUTS, DOGU_DEVICE_WORKSPACE_ON_HOST_PATH, DOGU_PROJECT_ID, DOGU_LOG_LEVEL } = options;
