@@ -8,7 +8,7 @@ const child_process_1 = require("child_process");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient }) => {
-    const { DOGU_LOG_LEVEL, DOGU_DEVICE_PROJECT_WORKSPACE_PATH, DOGU_RUN_TYPE } = options;
+    const { DOGU_LOG_LEVEL, DOGU_DEVICE_PROJECT_WORKSPACE_PATH } = options;
     logger.info('log level', { DOGU_LOG_LEVEL });
     const script = input.get('script');
     const pathMap = await deviceHostClient.getPathMap();

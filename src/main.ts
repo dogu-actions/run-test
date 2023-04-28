@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 ActionKit.run(async ({ options, logger, input, deviceHostClient }) => {
-  const { DOGU_LOG_LEVEL, DOGU_DEVICE_PROJECT_WORKSPACE_PATH, DOGU_RUN_TYPE } = options;
+  const { DOGU_LOG_LEVEL, DOGU_DEVICE_PROJECT_WORKSPACE_PATH } = options;
   logger.info('log level', { DOGU_LOG_LEVEL });
   const script = input.get<string>('script');
   const pathMap = await deviceHostClient.getPathMap();
