@@ -16,7 +16,8 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient }) 
     let yarnPath = yarn;
     let userProjectPath = path_1.default.resolve(action_kit_1.HostPaths.deviceProjectGitPath(DOGU_DEVICE_PROJECT_WORKSPACE_PATH));
     const optionsConfig = await action_kit_1.OptionsConfig.load();
-    if (optionsConfig.get('localUserProject.use', false)) {
+    const useLocalUserProject = optionsConfig.get('localUserProject.use', false);
+    if (useLocalUserProject) {
         logger.info('Using local user project...');
         async function findLocalUserProject() {
             const searchPaths = optionsConfig.get('localUserProject.searchPaths', []);
@@ -40,10 +41,12 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient }) 
     logger.info('User project path and yarn path', { userProjectPath, yarnPath });
     function runYarn(args) {
         const command = yarnPath;
+        const shell = useLocalUserProject ? true : false;
         logger.info(`Running command: ${command} ${args.join(' ')}`);
         const result = (0, child_process_1.spawnSync)(command, args, {
             stdio: 'inherit',
             cwd: userProjectPath,
+            shell,
         });
         if (result.status !== 0) {
             throw new Error(`Command failed: ${command} ${args.join(' ')}`);
