@@ -7,7 +7,7 @@
   "main": "./build/src/main.js",
   "scripts": {
     "build": "tsc -b",
-    "clean": "shx rm -rf build .publish-github",
+    "clean": "shx rm -rf build generated .publish-github",
     "dev": "nodemon",
     "publish:github": "tsc -b && ts-node scripts/publish-github.ts",
     "rebuild": "yarn run clean && yarn run build",
