@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 ActionKit.run(async ({ options, logger, input, deviceHostClient }) => {
-  const { DOGU_LOG_LEVEL, DOGU_DEVICE_PROJECT_WORKSPACE_PATH, DOGU_RUN_TYPE } = options;
+  const { DOGU_LOG_LEVEL, DOGU_DEVICE_PROJECT_WORKSPACE_PATH } = options;
   logger.info('log level', { DOGU_LOG_LEVEL });
   const script = input.get<string>('script');
   const pathMap = await deviceHostClient.getPathMap();
@@ -12,7 +12,8 @@ ActionKit.run(async ({ options, logger, input, deviceHostClient }) => {
   let yarnPath = yarn;
   let userProjectPath = path.resolve(HostPaths.deviceProjectGitPath(DOGU_DEVICE_PROJECT_WORKSPACE_PATH));
   const optionsConfig = await OptionsConfig.load();
-  if (optionsConfig.get('localUserProject.use', false)) {
+  const useLocalUserProject = optionsConfig.get('localUserProject.use', false);
+  if (useLocalUserProject) {
     logger.info('Using local user project...');
 
     async function findLocalUserProject(): Promise<string> {
@@ -39,10 +40,12 @@ ActionKit.run(async ({ options, logger, input, deviceHostClient }) => {
 
   function runYarn(args: string[]) {
     const command = yarnPath;
+    const shell = useLocalUserProject ? true : false;
     logger.info(`Running command: ${command} ${args.join(' ')}`);
     const result = spawnSync(command, args, {
       stdio: 'inherit',
       cwd: userProjectPath,
+      shell,
     });
     if (result.status !== 0) {
       throw new Error(`Command failed: ${command} ${args.join(' ')}`);
