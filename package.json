@@ -24,8 +24,6 @@
     "@dogu-tech/device-client-common": "development",
     "@dogu-tech/device-interface": "development",
     "@dogu-tech/env-tools": "development",
-    "@dogu-tech/gamium-client-common": "development",
-    "@dogu-tech/gamium-protocol": "development",
     "@dogu-tech/node": "development",
     "@dogu-tech/types": "development"
   },
