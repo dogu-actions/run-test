@@ -24,8 +24,6 @@
     "@dogu-tech/device-client-common": "latest",
     "@dogu-tech/device-interface": "latest",
     "@dogu-tech/env-tools": "latest",
-    "@dogu-tech/gamium-client-common": "latest",
-    "@dogu-tech/gamium-protocol": "latest",
     "@dogu-tech/node": "latest",
     "@dogu-tech/types": "latest"
   },
