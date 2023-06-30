@@ -7,16 +7,25 @@
   "main": "./build/src/main.js",
   "scripts": {
     "build": "tsc -b",
-    "clean": "shx rm -rf build .publish-github",
+    "clean": "shx rm -rf build generated .publish-github",
     "dev": "nodemon",
-    "publish:github:dev": "tsc -b && cross-env DOGU_RUN_TYPE=development ts-node scripts/publish-github.ts",
+    "publish:github": "tsc -b && ts-node scripts/publish-github.ts",
     "rebuild": "yarn run clean && yarn run build",
     "start": "yarn run build && ts-node src/main.ts",
     "watch": "clear; echo @dogu-actions/run-test Watching... && nodemon"
   },
   "types": "./build/src/main.d.ts",
   "dependencies": {
-    "@dogu-tech/action-kit": "development"
+    "@dogu-tech/action-common": "latest",
+    "@dogu-tech/action-kit": "latest",
+    "@dogu-tech/common": "latest",
+    "@dogu-tech/console-action": "latest",
+    "@dogu-tech/device-client": "latest",
+    "@dogu-tech/device-client-common": "latest",
+    "@dogu-tech/device-interface": "latest",
+    "@dogu-tech/env-tools": "latest",
+    "@dogu-tech/node": "latest",
+    "@dogu-tech/types": "latest"
   },
   "devDependencies": {
     "@types/node": "18.15.11",
@@ -28,5 +37,6 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
