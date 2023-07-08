@@ -1,9 +1,8 @@
 {
   "name": "@dogu-actions/run-test",
   "version": "0.0.0",
-  "description": "",
-  "license": "MIT",
-  "author": "dogu",
+  "license": "SEE LICENSE IN https://github.com/dogu-team/dogu/blob/main/LICENSE.md",
+  "author": "Dogu Technologies",
   "main": "./build/src/main.js",
   "scripts": {
     "build": "tsc -b",
@@ -38,5 +37,6 @@
   "publishConfig": {
     "access": "public"
   },
+  "url": "https://github.com/dogu-team/dogu",
   "packageManager": "yarn@3.2.3"
 }
