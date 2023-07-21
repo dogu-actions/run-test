@@ -8,13 +8,13 @@ const child_process_1 = require("child_process");
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient }) => {
-    const { DOGU_LOG_LEVEL, DOGU_DEVICE_PROJECT_WORKSPACE_PATH } = options;
+    const { DOGU_LOG_LEVEL, DOGU_ROUTINE_WORKSPACE_PATH } = options;
     logger.info('log level', { DOGU_LOG_LEVEL });
     const script = input.get('script');
     const pathMap = await deviceHostClient.getPathMap();
     const { yarn } = pathMap.common;
     let yarnPath = yarn;
-    let userProjectPath = path_1.default.resolve(action_kit_1.HostPaths.deviceProjectGitPath(DOGU_DEVICE_PROJECT_WORKSPACE_PATH));
+    let userProjectPath = DOGU_ROUTINE_WORKSPACE_PATH;
     const optionsConfig = await action_kit_1.OptionsConfig.load();
     const useLocalUserProject = optionsConfig.get('localUserProject.use', false);
     if (useLocalUserProject) {
