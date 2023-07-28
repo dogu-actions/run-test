@@ -56,21 +56,21 @@ __metadata:
   linkType: soft
 
 "@dogu-tech/action-common@npm:latest":
-  version: 0.0.18
-  resolution: "@dogu-tech/action-common@npm:0.0.18"
+  version: 0.0.20
+  resolution: "@dogu-tech/action-common@npm:0.0.20"
   dependencies:
     "@dogu-tech/common": latest
     "@dogu-tech/types": latest
     class-transformer: 0.5.1
     class-validator: 0.14.0
     reflect-metadata: 0.1.13
-  checksum: 65d66dea43bfd8600c00d92082fdce9a9e421a66a65824e06a430ec6731a85300f5f9b776145167953a2005e3c1cea9aaef65fd13a72038f3458b8ab4e5fbda2
+  checksum: 557f39571cad36e7ad506901d98da973264f6bca0528b86817060daddcdd5cb2cee35eea7fcb0404d651793fc3acf62c675a4a1f04f9ce7bf032716ebce17097
   languageName: node
   linkType: hard
 
 "@dogu-tech/action-kit@npm:latest":
-  version: 0.0.18
-  resolution: "@dogu-tech/action-kit@npm:0.0.18"
+  version: 0.0.19
+  resolution: "@dogu-tech/action-kit@npm:0.0.19"
   dependencies:
     "@dogu-tech/action-common": latest
     "@dogu-tech/common": latest
@@ -86,13 +86,13 @@ __metadata:
     lodash: 4.17.21
     reflect-metadata: 0.1.13
     yaml: 2.2.1
-  checksum: 2e4f021d00d5511eb2a515b9bfd4f43015c491cd817bbb4b94217c4dca272292beca0f17b6757d6d63d7f36327a6d85411bd678c54d50d50acbc2191975f9c24
+  checksum: 5f78b12368ee64a36f942e3813a48be46258b2b63fcdcb54fa9a76cdf26d5904cb3b8fe8eda84ad1c9d16e51f1acc34bea4e0c8fa480d9b6497bae5739757f60
   languageName: node
   linkType: hard
 
 "@dogu-tech/common@npm:latest":
-  version: 0.0.19
-  resolution: "@dogu-tech/common@npm:0.0.19"
+  version: 0.0.21
+  resolution: "@dogu-tech/common@npm:0.0.21"
   dependencies:
     axios: 1.3.5
     class-transformer: 0.5.1
@@ -100,25 +100,25 @@ __metadata:
     eventemitter2: 6.4.9
     lodash: 4.17.21
     reflect-metadata: 0.1.13
-  checksum: 4be1bd1563e04a7b422b05920ee9d3c89a0ad824aa1f219cc17ee667fd4d4d5de1d4b0ade666376e6d22ab019e58fa6b46a802c2d47e74fda7bb1f4348697d57
+  checksum: f187ad3f74f7959dc1f284a04084fba85b0c2fbea80e11a19062c2147b8c2f55d6c24fce49ce7b711b8b37aa65c960ecc0c00ed002ed6aeebef53812f2bd1683
   languageName: node
   linkType: hard
 
 "@dogu-tech/console-action@npm:latest":
-  version: 0.0.18
-  resolution: "@dogu-tech/console-action@npm:0.0.18"
+  version: 0.0.20
+  resolution: "@dogu-tech/console-action@npm:0.0.20"
   dependencies:
     "@dogu-tech/common": latest
     "@dogu-tech/types": latest
     class-transformer: 0.5.1
     class-validator: 0.14.0
-  checksum: 8df1fb0518feefa91eaf260e2c2840ed3e18a5945fd6e689f24a99e45bf87784bec49bd07d6bac014b64eb07e6c08d1d2c54a825bc065b5eeddfb593279d6975
+  checksum: 72ab98ac916966a6925185800f15c81e640c7a4c6f49181d4f1c7348997d6dc23b6f5c2708e8ba1171a87d9fc5c9756beb111fb7339370d1d539441496152a16
   languageName: node
   linkType: hard
 
 "@dogu-tech/device-client-common@npm:latest":
-  version: 0.0.19
-  resolution: "@dogu-tech/device-client-common@npm:0.0.19"
+  version: 0.0.20
+  resolution: "@dogu-tech/device-client-common@npm:0.0.20"
   dependencies:
     "@dogu-tech/common": latest
     "@dogu-tech/device-interface": latest
@@ -128,13 +128,13 @@ __metadata:
     class-validator: 0.14.0
     lodash: 4.17.21
     reflect-metadata: 0.1.13
-  checksum: 90bee6305eab4a1af47ab5c8916086f637b9c0d88035b0fc79a471ccb0c199b2abea226d8e91d2f6ae5d18343d8a21259ecb274b3590ccea71cf7cd1f34f974d
+  checksum: 8e839d440a4109084b59e3f78cb20a0da8e9a8a5730300ce5bf35f0374efc19f5c7b2a9d555854a4d3534db5bdc372179c90694b023116701a9772dedcc0b5ab
   languageName: node
   linkType: hard
 
 "@dogu-tech/device-client@npm:latest":
-  version: 0.0.19
-  resolution: "@dogu-tech/device-client@npm:0.0.19"
+  version: 0.0.20
+  resolution: "@dogu-tech/device-client@npm:0.0.20"
   dependencies:
     "@dogu-tech/common": latest
     "@dogu-tech/device-client-common": latest
@@ -145,23 +145,23 @@ __metadata:
     class-validator: 0.14.0
     reflect-metadata: 0.1.13
     ws: 8.13.0
-  checksum: b0bb35698a9846b3a8b4a8c6f0a28fc3174ba6bebaab5375fbee1e4a69aa7663da2e90a13596c6565ddcbcfc2ab6a7880d9cb3171acae8e0ffd8d89da6adf0d8
+  checksum: 35e8b33de85be009aa747b2242679cbe27a426ba0b599aa142b864b91fb384f45c462316125a7f6b50018f798cf388fab07a4564baa6752a40732d736a71d0b6
   languageName: node
   linkType: hard
 
 "@dogu-tech/device-interface@npm:latest":
-  version: 0.0.19
-  resolution: "@dogu-tech/device-interface@npm:0.0.19"
+  version: 0.0.20
+  resolution: "@dogu-tech/device-interface@npm:0.0.20"
   dependencies:
     "@dogu-tech/common": latest
     "@dogu-tech/types": latest
-  checksum: 36303878e14c17ea111fd0fcca82955895249ec7415583c25e13fd0f7ce904c307752b1827376d86e44121b95a7eba0cd7b4651a3b31c603be494612d236823a
+  checksum: c157052bcbcd1c5e56c2801bacac1930a4793f09f11f901b9a8d3f1db908b61ffaf1b0615a98fac03554b4f0a8d62c1f53c5f3b0400361031096783793915a8c
   languageName: node
   linkType: hard
 
 "@dogu-tech/env-tools@npm:latest":
-  version: 0.0.18
-  resolution: "@dogu-tech/env-tools@npm:0.0.18"
+  version: 0.0.19
+  resolution: "@dogu-tech/env-tools@npm:0.0.19"
   dependencies:
     "@dogu-tech/common": latest
     "@dogu-tech/types": latest
@@ -170,13 +170,13 @@ __metadata:
     dotenv: 16.0.3
     lodash: 4.17.21
     reflect-metadata: 0.1.13
-  checksum: 3c4a8bdfbda59ea827676e633f567035b43ef5991755eb849de18610820bafeb76e5d3fdf361db0b88006ce3cf0e950d37b549855478ebd55d57b60806a180ad
+  checksum: 323dc82ac8af1ae8a0cc0d91237e392185e7eb221f3dd083c1b3d11f42e8947e2a7922ddc81d8127409e2426db61f20e88fd7ab0a7611ce5e5a21afbbe439dc5
   languageName: node
   linkType: hard
 
 "@dogu-tech/node@npm:latest":
-  version: 0.0.18
-  resolution: "@dogu-tech/node@npm:0.0.18"
+  version: 0.0.19
+  resolution: "@dogu-tech/node@npm:0.0.19"
   dependencies:
     "@dogu-tech/common": latest
     "@dogu-tech/types": latest
@@ -195,19 +195,20 @@ __metadata:
     plist: 3.0.6
     reflect-metadata: 0.1.13
     rxjs: 7.5.6
+    tree-kill: 1.2.2
     typed-rest-client: 1.8.9
     winston: 3.8.2
     winston-daily-rotate-file: 4.7.1
     winston-transport: 4.5.0
     ws: 8.13.0
     yaml: 2.2.1
-  checksum: fc656911b5b7f5b3cb862e8c771ccde100b7ed9baded138b4a452cad33c39dc539055e86bc9bda3b2d9715f0054dae2b10cb6495affb4e4fb65c725ad380b36e
+  checksum: 0a4975d8afd417c57f8983fa47c37f0471b27e1fb74d4747c46082f2fc0c98fe2a7ff0edb77fa44084c2543348f04b8d725b86ecbae2a5ab3cee76ce27cba46b
   languageName: node
   linkType: hard
 
 "@dogu-tech/types@npm:latest":
-  version: 0.0.19
-  resolution: "@dogu-tech/types@npm:0.0.19"
+  version: 0.0.21
+  resolution: "@dogu-tech/types@npm:0.0.21"
   dependencies:
     "@dogu-tech/common": latest
     class-transformer: 0.5.1
@@ -215,7 +216,7 @@ __metadata:
     long: 4.0.0
     protobufjs: 7.1.2
     reflect-metadata: 0.1.13
-  checksum: 1064099f5c74694dda7c8c90dbe293b2670d80a45a71b7bbf7e4b7a56c4a2bb9c2015f799ac203acfac7219a3a172a29bbd383e87ff126049a873385fa72e0d3
+  checksum: 02b8ec99b200dc76e846a8438fe0352a39070be316bf84147d8123b3a707ef38a82a20c4809859704e495d99a42e00531b494c59862835d895064911f2d3b19f
   languageName: node
   linkType: hard
 
@@ -816,9 +817,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=13.7.0":
-  version: 20.4.3
-  resolution: "@types/node@npm:20.4.3"
-  checksum: 4df3664821af2328c25e3d78486ec94f45f5f4a35222678954b5c7dd5d4c4e5a0cdc9f51e09a7f7f078559639293f6cee79d37e751295552be824af1f3d8ad12
+  version: 20.4.5
+  resolution: "@types/node@npm:20.4.5"
+  checksum: 36a0304a8dc346a1b2d2edac4c4633eecf70875793d61a5274d0df052d7a7af7a8e34f29884eac4fbd094c4f0201477dcb39c0ecd3307ca141688806538d1138
   languageName: node
   linkType: hard
 
@@ -1893,15 +1894,15 @@ __metadata:
   linkType: hard
 
 "jackspeak@npm:^2.0.3":
-  version: 2.2.1
-  resolution: "jackspeak@npm:2.2.1"
+  version: 2.2.2
+  resolution: "jackspeak@npm:2.2.2"
   dependencies:
     "@isaacs/cliui": ^8.0.2
     "@pkgjs/parseargs": ^0.11.0
   dependenciesMeta:
     "@pkgjs/parseargs":
       optional: true
-  checksum: e29291c0d0f280a063fa18fbd1e891ab8c2d7519fd34052c0ebde38538a15c603140d60c2c7f432375ff7ee4c5f1c10daa8b2ae19a97c3d4affe308c8360c1df
+  checksum: 7b1468dd910afc00642db87448f24b062346570b8b47531409aa9012bcb95fdf7ec2b1c48edbb8b57a938c08391f8cc01b5034fc335aa3a2e74dbcc0ee5c555a
   languageName: node
   linkType: hard
 
@@ -1946,9 +1947,9 @@ __metadata:
   linkType: hard
 
 "libphonenumber-js@npm:^1.10.14":
-  version: 1.10.37
-  resolution: "libphonenumber-js@npm:1.10.37"
-  checksum: c28f7623226d6ab33c48044f12e772d35dfdbebae53e89434840f64da92e92736fa547a47b48d99050f225d921df71d9827848f78d6c62a063dec4c44dad1b1b
+  version: 1.10.38
+  resolution: "libphonenumber-js@npm:1.10.38"
+  checksum: dc7adb8e081d525b4ef7589aea97a8f620eafa5a5d8a64987f696e20262e8bd40bd91ff3282cf5798148ebfcd158fd55cdcb377328438f05513e5430fe9605a1
   languageName: node
   linkType: hard
 
@@ -2890,6 +2891,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tree-kill@npm:1.2.2":
+  version: 1.2.2
+  resolution: "tree-kill@npm:1.2.2"
+  bin:
+    tree-kill: cli.js
+  checksum: 49117f5f410d19c84b0464d29afb9642c863bc5ba40fcb9a245d474c6d5cc64d1b177a6e6713129eb346b40aebb9d4631d967517f9fbe8251c35b21b13cd96c7
+  languageName: node
+  linkType: hard
+
 "triple-beam@npm:^1.3.0":
   version: 1.4.1
   resolution: "triple-beam@npm:1.4.1"
@@ -2936,9 +2946,9 @@ __metadata:
   linkType: hard
 
 "tslib@npm:^2.1.0":
-  version: 2.6.0
-  resolution: "tslib@npm:2.6.0"
-  checksum: c01066038f950016a18106ddeca4649b4d76caa76ec5a31e2a26e10586a59fceb4ee45e96719bf6c715648e7c14085a81fee5c62f7e9ebee68e77a5396e5538f
+  version: 2.6.1
+  resolution: "tslib@npm:2.6.1"
+  checksum: b0d176d176487905b66ae4d5856647df50e37beea7571c53b8d10ba9222c074b81f1410fb91da13debaf2cbc970663609068bdebafa844ea9d69b146527c38fe
   languageName: node
   linkType: hard
 
