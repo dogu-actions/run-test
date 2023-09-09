@@ -51,7 +51,7 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
             : String(resolvedAppVersion);
         appPath = await (0, action_kit_1.downloadApp)(logger, consoleActionClient, deviceHostClient, DOGU_DEVICE_PLATFORM, DOGU_HOST_WORKSPACE_PATH, currentPlatformAppVersion);
     }
-    let env = process.env;
+    let env = (0, action_kit_1.newCleanNodeEnv)();
     if (appPath) {
         const appEnv = {
             DOGU_APP_PATH: appPath,
