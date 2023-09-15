@@ -24,6 +24,7 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
     const checkoutPath = input.get('checkoutPath');
     const checkoutUrl = input.get('checkoutUrl');
     const appVersion = input.get('appVersion');
+    const appPackageName = input.get('appPackageName');
     const uninstallApp = input.get('uninstallApp');
     const installApp = input.get('installApp');
     const runApp = input.get('runApp');
@@ -40,7 +41,20 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
     }
     let appPath = '';
     const resolvedAppVersion = appVersion || process.env.DOGU_APP_VERSION || '';
-    if (resolvedAppVersion) {
+    const resolvedAppPackageName = appPackageName || process.env.DOGU_APP_PACKAGE_NAME || '';
+    if (resolvedAppPackageName) {
+        const currentPlatformPackageName = typeof resolvedAppPackageName === 'object'
+            ? (() => {
+                const platformAppVersion = Reflect.get(resolvedAppPackageName, DOGU_DEVICE_PLATFORM);
+                if (!platformAppVersion) {
+                    throw new Error(`Invalid app package name: ${(0, action_kit_1.stringify)(resolvedAppPackageName)} for platform: ${DOGU_DEVICE_PLATFORM}`);
+                }
+                return platformAppVersion;
+            })()
+            : String(resolvedAppPackageName);
+        appPath = await (0, action_kit_1.downloadApp)(logger, consoleActionClient, deviceHostClient, DOGU_DEVICE_PLATFORM, DOGU_HOST_WORKSPACE_PATH, { appPackageName: currentPlatformPackageName });
+    }
+    else if (resolvedAppVersion) {
         const currentPlatformAppVersion = typeof resolvedAppVersion === 'object'
             ? (() => {
                 const platformAppVersion = Reflect.get(resolvedAppVersion, DOGU_DEVICE_PLATFORM);
@@ -50,7 +64,7 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
                 return platformAppVersion;
             })()
             : String(resolvedAppVersion);
-        appPath = await (0, action_kit_1.downloadApp)(logger, consoleActionClient, deviceHostClient, DOGU_DEVICE_PLATFORM, DOGU_HOST_WORKSPACE_PATH, currentPlatformAppVersion);
+        appPath = await (0, action_kit_1.downloadApp)(logger, consoleActionClient, deviceHostClient, DOGU_DEVICE_PLATFORM, DOGU_HOST_WORKSPACE_PATH, { appVersion: currentPlatformAppVersion });
     }
     let env = (0, action_kit_1.newCleanNodeEnv)();
     if (appPath) {
