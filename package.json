@@ -21,7 +21,6 @@
     "@dogu-tech/console-action": "latest",
     "@dogu-tech/device-client": "latest",
     "@dogu-tech/device-client-common": "latest",
-    "@dogu-tech/device-interface": "latest",
     "@dogu-tech/env-tools": "latest",
     "@dogu-tech/node": "latest",
     "@dogu-tech/types": "latest",
