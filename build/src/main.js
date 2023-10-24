@@ -136,7 +136,7 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
     const result = (0, child_process_1.spawnSync)(executeCommand, {
         encoding: 'utf8',
         stdio: 'inherit',
-        shell: true,
+        shell: action_kit_1.ChildProcess.defaultShell(),
         cwd: DOGU_STEP_WORKING_PATH,
         env,
     });
