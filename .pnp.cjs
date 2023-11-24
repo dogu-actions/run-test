@@ -33,15 +33,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@dogu-tech/action-common", "npm:0.0.54"],\
-            ["@dogu-tech/action-kit", "npm:0.0.53"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/console-action", "npm:0.0.54"],\
-            ["@dogu-tech/device-client", "npm:0.0.54"],\
-            ["@dogu-tech/device-client-common", "npm:0.0.54"],\
-            ["@dogu-tech/env-tools", "npm:0.0.53"],\
-            ["@dogu-tech/node", "npm:0.0.53"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/action-common", "npm:0.0.55"],\
+            ["@dogu-tech/action-kit", "npm:0.0.54"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/console-action", "npm:0.0.55"],\
+            ["@dogu-tech/device-client", "npm:0.0.55"],\
+            ["@dogu-tech/device-client-common", "npm:0.0.55"],\
+            ["@dogu-tech/env-tools", "npm:0.0.54"],\
+            ["@dogu-tech/node", "npm:0.0.54"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["@types/lodash", "npm:4.14.202"],\
             ["@types/node", "npm:18.15.11"],\
             ["cross-env", "npm:7.0.3"],\
@@ -97,15 +97,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@dogu-actions/run-test", "workspace:."],\
-            ["@dogu-tech/action-common", "npm:0.0.54"],\
-            ["@dogu-tech/action-kit", "npm:0.0.53"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/console-action", "npm:0.0.54"],\
-            ["@dogu-tech/device-client", "npm:0.0.54"],\
-            ["@dogu-tech/device-client-common", "npm:0.0.54"],\
-            ["@dogu-tech/env-tools", "npm:0.0.53"],\
-            ["@dogu-tech/node", "npm:0.0.53"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/action-common", "npm:0.0.55"],\
+            ["@dogu-tech/action-kit", "npm:0.0.54"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/console-action", "npm:0.0.55"],\
+            ["@dogu-tech/device-client", "npm:0.0.55"],\
+            ["@dogu-tech/device-client-common", "npm:0.0.55"],\
+            ["@dogu-tech/env-tools", "npm:0.0.54"],\
+            ["@dogu-tech/node", "npm:0.0.54"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["@types/lodash", "npm:4.14.202"],\
             ["@types/node", "npm:18.15.11"],\
             ["cross-env", "npm:7.0.3"],\
@@ -119,12 +119,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@dogu-tech/action-common", [\
-        ["npm:0.0.54", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-action-common-npm-0.0.54-9a51ad4a2b-0418c6f0eb.zip/node_modules/@dogu-tech/action-common/",\
+        ["npm:0.0.55", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-action-common-npm-0.0.55-11809d44ae-07413f53b5.zip/node_modules/@dogu-tech/action-common/",\
           "packageDependencies": [\
-            ["@dogu-tech/action-common", "npm:0.0.54"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/action-common", "npm:0.0.55"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
             ["reflect-metadata", "npm:0.1.13"]\
@@ -133,17 +133,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@dogu-tech/action-kit", [\
-        ["npm:0.0.53", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-action-kit-npm-0.0.53-d05e5776af-be5c856b83.zip/node_modules/@dogu-tech/action-kit/",\
+        ["npm:0.0.54", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-action-kit-npm-0.0.54-c0e4faf077-cc07af6e7a.zip/node_modules/@dogu-tech/action-kit/",\
           "packageDependencies": [\
-            ["@dogu-tech/action-kit", "npm:0.0.53"],\
-            ["@dogu-tech/action-common", "npm:0.0.54"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/console-action", "npm:0.0.54"],\
-            ["@dogu-tech/device-client", "npm:0.0.54"],\
-            ["@dogu-tech/env-tools", "npm:0.0.53"],\
-            ["@dogu-tech/node", "npm:0.0.53"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/action-kit", "npm:0.0.54"],\
+            ["@dogu-tech/action-common", "npm:0.0.55"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/console-action", "npm:0.0.55"],\
+            ["@dogu-tech/device-client", "npm:0.0.55"],\
+            ["@dogu-tech/env-tools", "npm:0.0.54"],\
+            ["@dogu-tech/node", "npm:0.0.54"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["axios", "npm:1.3.5"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
@@ -156,10 +156,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@dogu-tech/common", [\
-        ["npm:0.0.55", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-common-npm-0.0.55-178557867a-8f91c871cd.zip/node_modules/@dogu-tech/common/",\
+        ["npm:0.0.56", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-common-npm-0.0.56-7dbaae3b5e-d17bb16857.zip/node_modules/@dogu-tech/common/",\
           "packageDependencies": [\
-            ["@dogu-tech/common", "npm:0.0.55"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
             ["axios", "npm:1.3.5"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
@@ -171,12 +171,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@dogu-tech/console-action", [\
-        ["npm:0.0.54", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-console-action-npm-0.0.54-8a0b2f1d4b-6c49cbebfe.zip/node_modules/@dogu-tech/console-action/",\
+        ["npm:0.0.55", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-console-action-npm-0.0.55-31b5bdb2ad-ecb00b4c60.zip/node_modules/@dogu-tech/console-action/",\
           "packageDependencies": [\
-            ["@dogu-tech/console-action", "npm:0.0.54"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/console-action", "npm:0.0.55"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"]\
           ],\
@@ -184,30 +184,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@dogu-tech/device-client", [\
-        ["npm:0.0.54", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-device-client-npm-0.0.54-148df9fce0-5a89cd37c2.zip/node_modules/@dogu-tech/device-client/",\
+        ["npm:0.0.55", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-device-client-npm-0.0.55-a9a05d9c42-2619fe953f.zip/node_modules/@dogu-tech/device-client/",\
           "packageDependencies": [\
-            ["@dogu-tech/device-client", "npm:0.0.54"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/device-client-common", "npm:0.0.54"],\
-            ["@dogu-tech/node", "npm:0.0.53"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/device-client", "npm:0.0.55"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/device-client-common", "npm:0.0.55"],\
+            ["@dogu-tech/node", "npm:0.0.54"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["axios", "npm:1.3.5"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
             ["reflect-metadata", "npm:0.1.13"],\
-            ["ws", "virtual:8324af30660e0704cc6bf0fda0ac3831faed88da9125a7f31c5060606147a447a7b69524ce087313a52626abe6e6e86842d99da97ac5eca02d66cb160bfc3754#npm:8.13.0"]\
+            ["ws", "virtual:3fa5c4bacfcdf9f9b4f05e3704d23d67388a249f05b3e20f3d8d28da9c097155b4d7c5e2106f24a57e5d05a8b6f8090f865c35859014c087f0259301687f1263#npm:8.13.0"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@dogu-tech/device-client-common", [\
-        ["npm:0.0.54", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-device-client-common-npm-0.0.54-a36102fd3c-f8ed718bda.zip/node_modules/@dogu-tech/device-client-common/",\
+        ["npm:0.0.55", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-device-client-common-npm-0.0.55-8f064707e0-6d2f25aa0d.zip/node_modules/@dogu-tech/device-client-common/",\
           "packageDependencies": [\
-            ["@dogu-tech/device-client-common", "npm:0.0.54"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/device-client-common", "npm:0.0.55"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["axios", "npm:1.3.5"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
@@ -218,12 +218,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@dogu-tech/env-tools", [\
-        ["npm:0.0.53", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-env-tools-npm-0.0.53-667d302c18-8a9fd07aca.zip/node_modules/@dogu-tech/env-tools/",\
+        ["npm:0.0.54", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-env-tools-npm-0.0.54-083d0e4651-cba973a502.zip/node_modules/@dogu-tech/env-tools/",\
           "packageDependencies": [\
-            ["@dogu-tech/env-tools", "npm:0.0.53"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/env-tools", "npm:0.0.54"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
             ["dotenv", "npm:16.0.3"],\
@@ -234,12 +234,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@dogu-tech/node", [\
-        ["npm:0.0.53", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-node-npm-0.0.53-8324af3066-5454c50ae4.zip/node_modules/@dogu-tech/node/",\
+        ["npm:0.0.54", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-node-npm-0.0.54-3fa5c4bacf-35d64f4ea0.zip/node_modules/@dogu-tech/node/",\
           "packageDependencies": [\
-            ["@dogu-tech/node", "npm:0.0.53"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
-            ["@dogu-tech/types", "npm:0.0.55"],\
+            ["@dogu-tech/node", "npm:0.0.54"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
             ["@octokit/request-error", "npm:3.0.3"],\
             ["@octokit/rest", "npm:19.0.7"],\
             ["axios", "npm:1.3.5"],\
@@ -261,20 +261,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tree-kill", "npm:1.2.2"],\
             ["typed-rest-client", "npm:1.8.9"],\
             ["winston", "npm:3.8.2"],\
-            ["winston-daily-rotate-file", "virtual:8324af30660e0704cc6bf0fda0ac3831faed88da9125a7f31c5060606147a447a7b69524ce087313a52626abe6e6e86842d99da97ac5eca02d66cb160bfc3754#npm:4.7.1"],\
+            ["winston-daily-rotate-file", "virtual:3fa5c4bacfcdf9f9b4f05e3704d23d67388a249f05b3e20f3d8d28da9c097155b4d7c5e2106f24a57e5d05a8b6f8090f865c35859014c087f0259301687f1263#npm:4.7.1"],\
             ["winston-transport", "npm:4.5.0"],\
-            ["ws", "virtual:8324af30660e0704cc6bf0fda0ac3831faed88da9125a7f31c5060606147a447a7b69524ce087313a52626abe6e6e86842d99da97ac5eca02d66cb160bfc3754#npm:8.13.0"],\
+            ["ws", "virtual:3fa5c4bacfcdf9f9b4f05e3704d23d67388a249f05b3e20f3d8d28da9c097155b4d7c5e2106f24a57e5d05a8b6f8090f865c35859014c087f0259301687f1263#npm:8.13.0"],\
             ["yaml", "npm:2.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["@dogu-tech/types", [\
-        ["npm:0.0.55", {\
-          "packageLocation": "./.yarn/cache/@dogu-tech-types-npm-0.0.55-29d16e8017-f78afc9fbb.zip/node_modules/@dogu-tech/types/",\
+        ["npm:0.0.56", {\
+          "packageLocation": "./.yarn/cache/@dogu-tech-types-npm-0.0.56-b21824b090-1d904399b4.zip/node_modules/@dogu-tech/types/",\
           "packageDependencies": [\
-            ["@dogu-tech/types", "npm:0.0.55"],\
-            ["@dogu-tech/common", "npm:0.0.55"],\
+            ["@dogu-tech/types", "npm:0.0.56"],\
+            ["@dogu-tech/common", "npm:0.0.56"],\
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.14.0"],\
             ["long", "npm:4.0.0"],\
@@ -3671,10 +3671,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8324af30660e0704cc6bf0fda0ac3831faed88da9125a7f31c5060606147a447a7b69524ce087313a52626abe6e6e86842d99da97ac5eca02d66cb160bfc3754#npm:4.7.1", {\
-          "packageLocation": "./.yarn/__virtual__/winston-daily-rotate-file-virtual-49c815d4d2/0/cache/winston-daily-rotate-file-npm-4.7.1-8acf5cd720-227daea41f.zip/node_modules/winston-daily-rotate-file/",\
+        ["virtual:3fa5c4bacfcdf9f9b4f05e3704d23d67388a249f05b3e20f3d8d28da9c097155b4d7c5e2106f24a57e5d05a8b6f8090f865c35859014c087f0259301687f1263#npm:4.7.1", {\
+          "packageLocation": "./.yarn/__virtual__/winston-daily-rotate-file-virtual-10f90a2c81/0/cache/winston-daily-rotate-file-npm-4.7.1-8acf5cd720-227daea41f.zip/node_modules/winston-daily-rotate-file/",\
           "packageDependencies": [\
-            ["winston-daily-rotate-file", "virtual:8324af30660e0704cc6bf0fda0ac3831faed88da9125a7f31c5060606147a447a7b69524ce087313a52626abe6e6e86842d99da97ac5eca02d66cb160bfc3754#npm:4.7.1"],\
+            ["winston-daily-rotate-file", "virtual:3fa5c4bacfcdf9f9b4f05e3704d23d67388a249f05b3e20f3d8d28da9c097155b4d7c5e2106f24a57e5d05a8b6f8090f865c35859014c087f0259301687f1263#npm:4.7.1"],\
             ["@types/winston", null],\
             ["file-stream-rotator", "npm:0.6.1"],\
             ["object-hash", "npm:2.2.0"],\
@@ -3750,10 +3750,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:8324af30660e0704cc6bf0fda0ac3831faed88da9125a7f31c5060606147a447a7b69524ce087313a52626abe6e6e86842d99da97ac5eca02d66cb160bfc3754#npm:8.13.0", {\
-          "packageLocation": "./.yarn/__virtual__/ws-virtual-72a4ae2eef/0/cache/ws-npm-8.13.0-26ffa3016a-53e991bbf9.zip/node_modules/ws/",\
+        ["virtual:3fa5c4bacfcdf9f9b4f05e3704d23d67388a249f05b3e20f3d8d28da9c097155b4d7c5e2106f24a57e5d05a8b6f8090f865c35859014c087f0259301687f1263#npm:8.13.0", {\
+          "packageLocation": "./.yarn/__virtual__/ws-virtual-4bcfca874e/0/cache/ws-npm-8.13.0-26ffa3016a-53e991bbf9.zip/node_modules/ws/",\
           "packageDependencies": [\
-            ["ws", "virtual:8324af30660e0704cc6bf0fda0ac3831faed88da9125a7f31c5060606147a447a7b69524ce087313a52626abe6e6e86842d99da97ac5eca02d66cb160bfc3754#npm:8.13.0"],\
+            ["ws", "virtual:3fa5c4bacfcdf9f9b4f05e3704d23d67388a249f05b3e20f3d8d28da9c097155b4d7c5e2106f24a57e5d05a8b6f8090f865c35859014c087f0259301687f1263#npm:8.13.0"],\
             ["@types/bufferutil", null],\
             ["@types/utf-8-validate", null],\
             ["bufferutil", null],\
