@@ -15,7 +15,7 @@ const TestEnvironment = ['node', 'python'];
 const isValidTestEnvironment = (value) => TestEnvironment.includes(value);
 action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, consoleActionClient, deviceClient }) => {
     const { DOGU_LOG_LEVEL, //
-    DOGU_ROUTINE_WORKSPACE_PATH, DOGU_DEVICE_PLATFORM, DOGU_HOST_WORKSPACE_PATH, DOGU_DEVICE_SERIAL, DOGU_STEP_WORKING_PATH, } = options;
+    DOGU_ROUTINE_WORKSPACE_PATH, DOGU_DEVICE_PLATFORM, DOGU_HOST_WORKSPACE_PATH, DOGU_DEVICE_SERIAL, DOGU_STEP_WORKING_PATH, DOGU_DEVICE_IS_SHAREABLE, } = options;
     logger.info('log level', { DOGU_LOG_LEVEL });
     const checkout = input.get('checkout');
     const branch = input.get('branch');
@@ -75,6 +75,14 @@ action_kit_1.ActionKit.run(async ({ options, logger, input, deviceHostClient, co
             ...appEnv,
         });
         env = lodash_1.default.merge(env, appEnv);
+        if (DOGU_DEVICE_IS_SHAREABLE === 'true' && DOGU_DEVICE_PLATFORM === 'ios') {
+            try {
+                await deviceHostClient.resignApp({ filePath: appPath });
+            }
+            catch (e) {
+                logger.warn('Failed to resign app', { error: (0, action_kit_1.errorify)(e) });
+            }
+        }
         if (uninstallApp) {
             logger.info('Uninstalling app...', { appPath });
             try {
